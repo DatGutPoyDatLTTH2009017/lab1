@@ -15,17 +15,22 @@ namespace Lab3
         public bool Accept()
         {
             Console.WriteLine("Please enter atomic number: ");
-            this.Number = Convert.ToInt32(Console.ReadLine());
+            var number = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please enter symbol: ");
-            this.Symbol = Console.ReadLine();
+            var symbol = Console.ReadLine();
             Console.WriteLine("Please enter full name: ");
-            this.Fullname = Console.ReadLine();
+            var fullname = Console.ReadLine();
             Console.WriteLine("Please enter atomic weight: ");
-            this.Weight = Convert.ToDouble(Console.ReadLine());
-            _listAtomic.Add(this);
+            var weight = Convert.ToDouble(Console.ReadLine());
+            _listAtomic.Add(new Atom()
+            {
+                Number = number,
+                Symbol = symbol,
+                Fullname = fullname,
+                Weight = weight,
+            });
             return true;
         }
-
         public void Display()
         {
             for (int i = 0; i < _listAtomic.Count; i++)
