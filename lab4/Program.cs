@@ -4,7 +4,8 @@
     {
         public static void Main(string[] args)
         {
-           
+            Faculty faculty = new Faculty();
+            faculty.CalculatedVacation();
         }
     }
 }
