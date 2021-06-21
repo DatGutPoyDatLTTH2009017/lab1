@@ -12,7 +12,6 @@
             {
                 throw new AmountException("Senior lecture can not get less than 60,000 salary", Fullname);
             }
-
             if (Bonus > 10000)
             {
                 throw new AmountException("Bonus is more than 10,000", Fullname);
